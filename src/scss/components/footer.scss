@@ -1,0 +1,17 @@
+.footer {
+  position: relative;
+  font-size: 12px;
+  text-align: center;
+
+  @include for-size(tablet) {
+    font-size: 14px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 16px;
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: 18px;
+  }
+}

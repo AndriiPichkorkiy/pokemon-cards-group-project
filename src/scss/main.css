@@ -1,0 +1,371 @@
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("../assets/fonts/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../assets/fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../assets/fonts/roboto-v20-latin_cyrillic-500.woff2") format("woff2"), url("../assets/fonts/roboto-v20-latin_cyrillic-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../assets/fonts/roboto-v20-latin_cyrillic-700.woff2") format("woff2"), url("../assets/fonts/roboto-v20-latin_cyrillic-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #e6e6e6;
+  color: black;
+}
+
+img {
+  border-style: none;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  display: inline-block;
+}
+
+button:hover,
+button:focus,
+input:hover,
+input:focus {
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn {
+  display: block;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px 0 15px;
+}
+
+@media (max-width: 400px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 767px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .container {
+    width: 1680px;
+  }
+}
+
+.header {
+  height: 85px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(rgba(20, 20, 20, 0)));
+  background: linear-gradient(180deg, #2e2e2e 0%, rgba(20, 20, 20, 0) 100%);
+}
+
+.navigation {
+  width: 100%;
+  padding: 20px 10px 0 10px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100px;
+  z-index: 2;
+  background: transparent;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    padding: 30px 50px 0px 50px;
+    height: 70px;
+  }
+}
+
+.navigation__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  width: 100px;
+  margin-right: 28px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    margin-right: 50px;
+  }
+}
+
+.main-title {
+  font-size: 30px;
+  text-align: left;
+  margin: 0 0 25px 0;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 45px;
+  }
+}
+
+.main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 1280px) {
+  .main {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .main {
+    margin-bottom: 30px;
+  }
+}
+
+.pokemon__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pokemon-card {
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  margin-right: 30px;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  position: relative;
+}
+
+.pokemon-card img {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  height: 150px;
+  z-index: 0;
+}
+
+.pokemon-card:hover {
+  background-color: #c9c9c9;
+}
+
+.pokemon-card:hover img {
+  position: absolute;
+  left: -10px;
+}
+
+.pokemon-card .pokemon-img {
+  height: 150px;
+  margin-top: 5px;
+}
+
+.main-scrollUp {
+  left: 97%;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
+
+.footer {
+  position: relative;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .footer {
+    font-size: 18px;
+  }
+}
+
+.spiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Spinner SVG */
+@-webkit-keyframes svg-spinner {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(185deg);
+            transform: rotate(185deg);
+  }
+  100% {
+    -webkit-transform: rotate(365deg);
+            transform: rotate(365deg);
+  }
+}
+@keyframes svg-spinner {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(185deg);
+            transform: rotate(185deg);
+  }
+  100% {
+    -webkit-transform: rotate(365deg);
+            transform: rotate(365deg);
+  }
+}
+
+.svg-spinner {
+  margin: 0 2px 0 0;
+  vertical-align: -2px;
+}
+
+.svg-spinner svg {
+  -webkit-animation: svg-spinner 1.3s linear infinite;
+          animation: svg-spinner 1.3s linear infinite;
+}
+
+.svg-spinner .path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 30;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+/*# sourceMappingURL=main.css.map */

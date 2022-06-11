@@ -1,0 +1,38 @@
+.header {
+  height: 85px;
+  background: linear-gradient(
+    180deg,
+    rgb(46, 46, 46) 0%,
+    rgba(20, 20, 20, 0) 100%
+  );
+}
+
+.navigation {
+  width: 100%;
+  padding: 20px 10px 0 10px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100px;
+  z-index: 2;
+  background: transparent;
+  transition: all 0.2s linear;
+  @include for-size(tablet) {
+    padding: 30px 50px 0px 50px;
+    height: 70px;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  width: 100px;
+  margin-right: 28px;
+  @include for-size(tablet) {
+    margin-right: 50px;
+  }
+}

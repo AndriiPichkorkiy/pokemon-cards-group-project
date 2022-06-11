@@ -1,0 +1,59 @@
+.spiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Spinner SVG */
+@-webkit-keyframes svg-spinner {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(185deg);
+            transform: rotate(185deg);
+  }
+  100% {
+    -webkit-transform: rotate(365deg);
+            transform: rotate(365deg);
+  }
+}
+@keyframes svg-spinner {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(185deg);
+            transform: rotate(185deg);
+  }
+  100% {
+    -webkit-transform: rotate(365deg);
+            transform: rotate(365deg);
+  }
+}
+
+.svg-spinner {
+  margin: 0 2px 0 0;
+  vertical-align: -2px;
+}
+
+.svg-spinner svg {
+  -webkit-animation: svg-spinner 1.3s linear infinite;
+          animation: svg-spinner 1.3s linear infinite;
+}
+
+.svg-spinner .path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 30;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+/*# sourceMappingURL=spiner.css.map */

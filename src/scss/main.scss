@@ -1,0 +1,12 @@
+@import './fonts.scss';
+
+//helpers
+@import './helpers/mixins.scss';
+
+@import './base.scss';
+
+//components
+@import './components/header.scss';
+@import './components/main-section.scss';
+@import './components/footer.scss';
+@import './components/spiner.scss';
