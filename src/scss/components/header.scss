@@ -45,6 +45,9 @@
   padding-bottom: 15px;
   color: wheat;
   text-align: center;
+  @include for-size(tablet) {
+    font-size: 35px;
+  }
 }
 
 .form__wrapper {
@@ -54,9 +57,14 @@
   align-items: center;
 }
 .form__label {
-  padding-bottom: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
+
 .form__input {
   width: 170px;
-  height: 25px;
+  height: 30px;
+  padding-left: 5px;
 }
