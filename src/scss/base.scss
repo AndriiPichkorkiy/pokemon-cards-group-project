@@ -82,9 +82,16 @@ li {
 .btn {
   display: block;
   cursor: pointer;
-  padding: 10px 10px;
+  width: 170px;
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 5px;
 }
-
+.btn:hover,
+.btn:focus {
+  background-color: grey;
+  color: white;
+}
 .is-hidden {
   display: none;
 }
