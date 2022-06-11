@@ -1,0 +1,134 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity250ms, visibility 250ms;
+  overflow-y: scroll;
+  perspective: 400px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 650px;
+  width: calc(100% - 30px);
+  min-height: 609px;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+  transition: transform 250ms;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 13px -7px #000000, 7px 3px 4px 5px rgba(0, 0, 0, 0);
+  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0,
+  // 0, 0.14), // 0px 2px 1px rgba(0, 0, 0, 0.2);
+  .backdrop.is-hidden & {
+    transform: translate(150%, -100%) scale(0.5) rotate(180deg);
+  }
+}
+.container-card {
+  display: flex;
+  margin-bottom: 40px;
+}
+.pokemon-image {
+  height: 300px;
+}
+.description-card {
+  padding: 15px;
+}
+.description-title {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.modal-table {
+  width: 100%;
+}
+table {
+  margin-bottom: 30px;
+  font-size: 14px;
+  border-radius: 10px;
+  border-spacing: 0;
+  text-align: center;
+}
+th {
+  background: #bcebdd;
+  color: red;
+  text-shadow: 0 1px 1px #2d2020;
+  padding: 10px 20px;
+}
+th,
+td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: white;
+}
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+th:first-child {
+  border-top-left-radius: 10px;
+}
+th:last-child {
+  border-top-right-radius: 10px;
+  border-right: none;
+}
+td {
+  padding: 10px 20px;
+  background: #f8e391;
+}
+tr:last-child td:first-child {
+  border-radius: 0 0 0 10px;
+}
+tr:last-child td:last-child {
+  border-radius: 0 0 10px 0;
+}
+tr td:last-child {
+  border-right: none;
+}
+.modal-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #bcebdd;
+  color: red;
+  border: none;
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: #6cccaf;
+  }
+}
+.modal__button-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #000000;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: color 250ms cubic-bezier();
+  &:hover,
+  &:focus {
+    border: 2px solid #6cccaf;
+    color: #6cccaf;
+  }
+  &__icon {
+    fill: currentColor;
+  }
+} // .is-hidden { // opacity: 0; //
+// pointer-events: none; // visibility: hidden; // }
