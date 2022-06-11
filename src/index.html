@@ -10,7 +10,36 @@
   </head>
 
   <body>
-    <div id="root">Text in root div</div>
-    <div id="modal"> Text in modal div</div>
+    <header>
+      <form class="form" autocomplete="off">
+          <h2 class="form__title">
+           Ввести текст
+          </h2>
+
+          <label class="form__label"
+            >Ім'я
+            <input class="form__input" type="text" name="name" />
+          </label>
+			 <button type="submit" class="form__submit">Почати пошук</button>
+			 <button type="button" class="form__btn">Улюблені пакемони</button>
+    </header>
+	 <main >
+		<h2>Список пакемонів</h2>
+	 </main>
+	 <section>
+	 <li class="pokemon-card">
+        <h2>${pokemon.name}</h2>
+        <img src=${pokemon.sprites.other.dream_world.front_default} />  
+      </li>
+		</section>
+		<footer class="footer"></footer>
+		<div class="backdrop">
+      <div class="modal" id="modal">
+        <button class="modal__button">Close
+        </button>
+		</div>
+		</div>
+    <!-- <div id="root">Text in root div</div>
+    
   </body>
 </html>
