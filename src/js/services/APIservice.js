@@ -13,7 +13,7 @@ export class APIService {
       if (!response.ok) {
         throw new Error();
       }
-      return response.json().results;
+      return response.json();
     });
   }
 
