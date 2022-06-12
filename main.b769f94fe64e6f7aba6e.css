@@ -99,7 +99,15 @@ li {
 .btn {
   display: block;
   cursor: pointer;
-  padding: 10px 10px; }
+  width: 170px;
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 5px; }
+
+.btn:hover,
+.btn:focus {
+  background-color: grey;
+  color: white; }
 
 .is-hidden {
   display: none; }
@@ -124,7 +132,6 @@ li {
       width: 1680px; } }
 
 .header {
-  height: 85px;
   background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(rgba(20, 20, 20, 0)));
   background: linear-gradient(180deg, #2e2e2e 0%, rgba(20, 20, 20, 0) 100%); }
 
@@ -161,13 +168,55 @@ li {
     .logo {
       margin-right: 50px; } }
 
-.main-title {
+.form {
+  padding: 15px; }
+
+.form__title {
   font-size: 30px;
-  text-align: left;
-  margin: 0 0 25px 0; }
+  padding-bottom: 15px;
+  color: wheat;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .form__title {
+      font-size: 35px; } }
+
+.form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.form__label {
+  font-size: 15px;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.form__input {
+  width: 170px;
+  height: 30px;
+  padding-left: 5px; }
+
+.main-title {
+  font-size: 25px;
+  text-align: center; }
   @media (min-width: 768px) {
     .main-title {
-      font-size: 45px; } }
+      font-size: 35px; } }
 
 .main {
   padding-top: 20px;
@@ -179,12 +228,19 @@ li {
     .main {
       margin-bottom: 30px; } }
 
+section {
+  padding-left: 15px;
+  padding-right: 15px; }
+
 .pokemon__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .pokemon-card {
   width: 200px;
@@ -194,7 +250,7 @@ li {
   border: 1px solid #000;
   border-radius: 5px;
   margin-bottom: 25px;
-  margin-right: 30px;
+  margin-right: 20px;
   background-color: #fff;
   cursor: pointer;
   -webkit-transition: all 0.2s linear;
@@ -222,6 +278,9 @@ li {
 
 .main-scrollUp {
   left: 97%; }
+
+.pokemon-card__name {
+  font-size: 20px; }
 
 .footer {
   position: relative;
@@ -284,3 +343,148 @@ li {
   -webkit-transform-origin: center;
           transform-origin: center; }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: opacity250ms, visibility 250ms;
+  transition: opacity250ms, visibility 250ms;
+  overflow-y: scroll;
+  -webkit-perspective: 400px;
+          perspective: 400px;
+  background: rgba(0, 0, 0, 0.2); }
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 650px;
+  width: calc(100% - 30px);
+  min-height: 609px;
+  padding: 40px;
+  -webkit-transform: translate(-50%, -50%) scale(1) rotate(0);
+          transform: translate(-50%, -50%) scale(1) rotate(0);
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 7px 3px 4px 5px rgba(0, 0, 0, 0);
+          box-shadow: 0px 10px 13px -7px #000000, 7px 3px 4px 5px rgba(0, 0, 0, 0); }
+  .backdrop.is-hidden .modal {
+    -webkit-transform: translate(150%, -100%) scale(0.5) rotate(180deg);
+            transform: translate(150%, -100%) scale(0.5) rotate(180deg); }
+
+.container-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px; }
+
+.pokemon-image {
+  height: 300px; }
+
+.description-card {
+  padding: 15px; }
+
+.description-title {
+  margin-bottom: 15px;
+  text-align: center; }
+
+.modal-table {
+  width: 100%; }
+
+table {
+  margin-bottom: 30px;
+  font-size: 14px;
+  border-radius: 10px;
+  border-spacing: 0;
+  text-align: center; }
+
+th {
+  background: #bcebdd;
+  color: red;
+  text-shadow: 0 1px 1px #2d2020;
+  padding: 10px 20px; }
+
+th,
+td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: white; }
+
+th:first-child,
+td:first-child {
+  text-align: left; }
+
+th:first-child {
+  border-top-left-radius: 10px; }
+
+th:last-child {
+  border-top-right-radius: 10px;
+  border-right: none; }
+
+td {
+  padding: 10px 20px;
+  background: #f8e391; }
+
+tr:last-child td:first-child {
+  border-radius: 0 0 0 10px; }
+
+tr:last-child td:last-child {
+  border-radius: 0 0 10px 0; }
+
+tr td:last-child {
+  border-right: none; }
+
+.modal-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #bcebdd;
+  color: red;
+  border: none; }
+  .modal-btn:hover, .modal-btn:focus {
+    color: #fff;
+    background-color: #6cccaf; }
+
+.modal__button-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  top: 8px;
+  right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  color: #000000;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: color 250ms cubic-bezier();
+  transition: color 250ms cubic-bezier(); }
+  .modal__button-close:hover, .modal__button-close:focus {
+    border: 2px solid #6cccaf;
+    color: #6cccaf; }
+  .modal__button-close__icon {
+    fill: currentColor; }
+
+.hide {
+    opacity: 0;
+    z-index: -10;
+}
