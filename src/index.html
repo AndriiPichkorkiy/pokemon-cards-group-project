@@ -13,13 +13,15 @@
     <header class="header">
       <h2 class="form__title">Pokemon Stats</h2>
       <div class="form__wrapper">
-        <form class="form" autocomplete="off">
+        <form class="form" autocomplete="off" id="form">
           <label class="form__label"
             >Ім'я
             <input class="form__input" type="text" name="name" />
           </label>
-          <button type="submit" class="btn btn-submit">Почати пошук</button>
-          <button type="button" class="btn btn-search">
+          <button type="submit" class="btn btn-submit" id="form-submit">
+            Почати пошук
+          </button>
+          <button type="button" class="btn btn-search" id="favorites">
             Улюблені покемони
           </button>
         </form>
@@ -30,7 +32,7 @@
     </main>
     <section>
       <ul class="pokemon__container">
-        <li class="pokemon-card">
+        <!-- <li class="pokemon-card">
           <h2 class="pokemon-card__name">Ім'я Покемона</h2>
           <img
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/17.svg"
@@ -89,63 +91,63 @@
           <img
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/23.svg"
           />
-        </li>
+        </li> -->
       </ul>
     </section>
     <footer class="footer"></footer>
 
-    <div class="backdrop hide" id="modal-backdrop">
-      <div class="modal" id="modal">
-        <button class="modal__button-close">Х</button>
-        <div class="container-card">
-          <img
-            class="pokemon-image"
-            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/22.svg"
-            alt="pokemon-image"
-            width="300"
-            height="300"
-          />
-          <div class="description-card">
-            <h3 class="description-title">Pokemons name</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-              optio asperiores, sunt ipsam est ex. Vel a labore rem harum facere
-              eaque enim officia molestias! Possimus, tenetur earum. Modi
-              deserunt dolorum ex ullam, ipsa blanditiis qui voluptate vitae
-              amet saepe. Fugit quos cum, libero laborum deleniti earum
-              adipisci? Eligendi, qui?
-            </p>
+    <div id="modal-root">
+      <!-- <div class="backdrop hide" id="modal-backdrop">
+        <div class="modal">
+          <button class="modal__button-close">Х</button>
+          <div class="container-card">
+            <img
+              class="pokemon-image"
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/22.svg"
+              alt="pokemon-image"
+              width="300"
+              height="300"
+            />
+            <div class="description-card">
+              <h3 class="description-title">Pokemons name</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
+                optio asperiores, sunt ipsam est ex. Vel a labore rem harum
+                facere eaque enim officia molestias! Possimus, tenetur earum.
+                Modi deserunt dolorum ex ullam, ipsa blanditiis qui voluptate
+                vitae amet saepe. Fugit quos cum, libero laborum deleniti earum
+                adipisci? Eligendi, qui?
+              </p>
+            </div>
           </div>
+
+          <table class="modal-table">
+            <thead>
+              <tr>
+                <th>hp</th>
+                <th>attack</th>
+                <th>defense</th>
+                <th>special-attack</th>
+                <th>special-defense</th>
+                <th>speed</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Value</td>
+                <td>Value</td>
+                <td>Value</td>
+                <td>Value</td>
+                <td>Value</td>
+                <td>Value</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button class="modal-btn" type="button">Add to your favorite!</button>
         </div>
-
-        <table class="modal-table">
-          <thead>
-            <tr>
-              <th>hp</th>
-              <th>attack</th>
-              <th>defense</th>
-              <th>special-attack</th>
-              <th>special-defense</th>
-              <th>speed</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Value</td>
-              <td>Value</td>
-              <td>Value</td>
-              <td>Value</td>
-              <td>Value</td>
-              <td>Value</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <button class="modal-btn" type="button">Add to your favorite!</button>
-      </div>
+      </div> -->
     </div>
-
-    <!-- <div id="root">Text in root div</div> -->
   </body>
 </html>
