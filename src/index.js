@@ -102,3 +102,5 @@ function createModalMarkup(pokemon) {
   const closeModalBtn = document.querySelector('.modal__button-close');
   closeModalBtn.addEventListener('click', onCloseModal);
 }
+
+console.log('Это моя ветка. Проверь пожалуйста');
